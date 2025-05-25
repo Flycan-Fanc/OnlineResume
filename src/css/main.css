@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+/* 基础布局 */
+
+/* 移动端 */
+.container {
+  display: block;
+}
+.sidebar {
+  width: 100%;
+  padding: 1rem;
+  background-color: pink;
+}
+.mobile-menu-btn {
+  display: block; /* 移动端显示汉堡按钮 */
+}
+.content {
+  width: 100%;
+  padding: 1rem;
+  background-color: skyblue;
+}
+
+/* 平板适配 (768px+) */
+@media (min-width: 48em) {
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  .sidebar {
+    position: fixed;
+    width: 100px;
+    height: 96vh;
+  }
+  .content {
+    position: sticky;
+    top: 0;
+    width: calc(100% - 200px);
+    min-width: 600px;
+    height: 96vh;
+    margin: 0 auto;
+    margin-right: 50px;
+  }
+}
+
+/* PC适配 (1024px+) */
+@media (min-width: 64em) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+  }
+  .sidebar {
+    position: fixed;
+    flex: 0 0 30vw;
+    width: 30vw;
+    height: 96vh;
+  }
+  .content {
+    position: sticky;
+    flex: 0 0 70vw;
+    top: 0;
+    margin-left: 30vw;
+    width: 70vw;
+    height: 96vh;
+  }
+  .mobile-menu-btn {
+    display: none; /* PC端隐藏汉堡按钮 */
+  }
+}
+
+/* 侧边栏布局 */
