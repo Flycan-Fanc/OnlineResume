@@ -6,6 +6,7 @@
 
 body {
   font-size: 16px;
+  background-color: #e5e5e5;
 }
 
 /* 基础布局 */
@@ -14,7 +15,7 @@ body {
 .container {
   display: block;
 }
-.sidebar {
+.sidebar-container {
   width: 100%;
   padding: 1rem;
   background-color: pink;
@@ -22,7 +23,7 @@ body {
 .mobile-menu-btn {
   display: block; /* 移动端显示汉堡按钮 */
 }
-.content {
+.content-container {
   width: 100%;
   padding: 1rem;
   background-color: skyblue;
@@ -35,19 +36,21 @@ body {
     align-items: center;
     height: 100vh;
   }
-  .sidebar {
+  .sidebar-container {
     position: fixed;
     width: 100px;
-    height: 96vh;
+    height: 100vh;
   }
-  .content {
+  .content-container {
     position: sticky;
     top: 0;
     width: calc(100% - 200px);
     min-width: 600px;
-    height: 96vh;
+    height: 100vh;
     margin: 0 auto;
     margin-right: 50px;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -60,23 +63,204 @@ body {
     margin: 0 auto;
     height: 100vh;
   }
-  .sidebar {
+  .sidebar-container {
     position: fixed;
     flex: 0 0 30vw;
     width: 30vw;
-    height: 96vh;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
   }
-  .content {
+  .content-container {
     position: sticky;
     flex: 0 0 70vw;
     top: 0;
     margin-left: 30vw;
     width: 70vw;
-    height: 96vh;
+    height: 100vh;
+    padding-left: 0;
   }
   .mobile-menu-btn {
     display: none; /* PC端隐藏汉堡按钮 */
   }
 }
 
+/* 切换内容区域显示 */
+.content section {
+  display: none;
+}
+.content section:target {
+  display: block;
+}
+
 /* 侧边栏布局 */
+.sidebar {
+  background-color: #f7f7f7;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .sidebar {
+    position: absolute;
+    left: 0;
+    top: 1em;
+    width: 100%;
+    height: 96vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 64em) {
+  .sidebar {
+    position: absolute;
+    top: 1em;
+    left: 8vw;
+    width: 280px;
+    min-width: 250px;
+    height: 96vh;
+  }
+}
+
+/* 内容区域布局*/
+.content {
+  background-color: #f7f7f7;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .content {
+    position: absolute;
+    top: 1em;
+    width: 95%;
+    height: 96vh;
+  }
+}
+
+@media (min-width: 64em) {
+  .content {
+    position: absolute;
+    top: 1em;
+    width: 88%;
+    min-width: 500px;
+    left: 0;
+    height: 96vh;
+  }
+}
+
+/* 清除默认样式 */
+.main-nav li {
+  list-style: none;
+}
+
+/* 侧边栏具体样式 */
+/* 移动端 */
+.sidebar {
+  height: 5em;
+  transition: height 0.2s ease-in-out;
+  overflow: hidden; /* 防止菜单未展开时文字先显示*/
+  width: 100%;
+}
+
+.sidebar .profile {
+  display: none;
+}
+
+.sidebar .main-nav {
+  display: none;
+}
+
+.sidebar .mobile-menu-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+}
+
+.sidebar .mobile-menu-btn .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.sidebar .mobile-menu-btn .hamburger_munu {
+  width: 5em;
+}
+
+/* 激活汉堡菜单 */
+.mobile-menu-btn.active ~ .main-nav {
+  display: flex;
+}
+
+.sidebar:has(.mobile-menu-btn.active) {
+  height: 17em;
+}
+
+.theme-switcher {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+}
+
+.theme-switcher > img {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  display: none;
+}
+
+.theme-switcher .turnDark_switcher.active {
+  display: block;
+}
+
+.theme-switcher .turnLight_switcher.active {
+  display: block;
+}
+
+/* 导航菜单 */
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-list .menu-list {
+  width: 100%;
+}
+
+.main-nav a {
+  text-decoration: none;
+}
+
+.main-nav img {
+  width: 2em;
+  margin-right: 1em;
+}
+
+.main-nav ul {
+  width: 100%;
+}
+
+.main-nav li {
+  width: 100%;
+}
+
+.main-nav a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 100%;
+  font-size: 1em;
+  color: #000;
+}
