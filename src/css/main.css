@@ -158,7 +158,7 @@ body {
 /* 移动端 */
 .sidebar {
   height: 5em;
-  transition: height 0.2s ease-in-out;
+  transition: all 0.3s ease-out;
   overflow: hidden; /* 防止菜单未展开时文字先显示*/
   width: 100%;
 }
@@ -263,4 +263,117 @@ body {
   width: 100%;
   font-size: 1em;
   color: #000;
+}
+
+.main-nav .menu-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 6em;
+}
+
+/* 侧边栏 —— 平板适配 */
+@media (min-width: 48em) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 96vh;
+    transition: none;
+    overflow: visible;
+    width: 100%;
+  }
+  .sidebar .mobile-menu-btn {
+    display: none;
+  }
+  .sidebar .theme-switcher {
+    position: static;
+    display: flex;
+    border-radius: 50%;
+    height: 5em;
+    width: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+  .sidebar .theme-switcher img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+  }
+  .sidebar .profile {
+    display: flex;
+    margin-bottom: 3em;
+  }
+  .sidebar .profile img {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+  }
+  .sidebar .main-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  .sidebar .main-nav .menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3em;
+  }
+  .sidebar .main-nav .menu-list .menu-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+  }
+  .sidebar .main-nav .menu-list .menu-content img {
+    margin: 0;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+  }
+  .sidebar .main-nav .menu-list .menuName {
+    display: none;
+  }
+}
+
+/* 侧边栏-pc适配 */
+@media (min-width: 64em) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 96vh;
+    transition: none;
+    overflow: hidden;
+    background-color: red;
+  }
+  .sidebar .mobile-menu-btn {
+    display: none;
+  }
+  .sidebar .theme-switcher {
+    position: relative;
+    right: 10%;
+    top: 20%;
+  }
+  .sidebar .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .sidebar .profile img {
+    width: 60%;
+    height: 60%;
+    border-radius: 0;
+  }
 }
