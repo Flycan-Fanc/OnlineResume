@@ -2,7 +2,6 @@
 document.querySelector(".mobile-menu-btn").addEventListener("click", function (e) {
   e.stopPropagation();
   e.currentTarget.classList.toggle("active");
-  //console.log(e.target.);
 });
 
 document.addEventListener("click", function (e) {
@@ -12,4 +11,35 @@ document.addEventListener("click", function (e) {
   if (!sidebar.contains(e.target) && mobileMenuBtn.classList.contains("active")) {
     mobileMenuBtn.classList.remove("active");
   }
+});
+
+// 根据 URL hash 高亮对应菜单项
+function highlightActiveMenu() {
+  const hash = window.location.hash;
+  if (hash) {
+    const activeLink = document.querySelector(`.main-nav a[href="${hash}"]`);
+    if (activeLink) {
+      document.querySelectorAll(".main-nav a").forEach((item) => {
+        item.classList.remove("active");
+      });
+      activeLink.classList.add("active");
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // pc端菜单选择回显
+  const menuLink = document.querySelectorAll(".menu-list a");
+  menuLink.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      // 移除所有的active
+      menuLink.forEach((item) => item.classList.remove("active"));
+      // 给当前点击的a添加active
+      this.classList.add("active");
+      console.log(this);
+    });
+  });
+  // 页面加载时根据当前 hash 高亮对应菜单
+  highlightActiveMenu();
 });

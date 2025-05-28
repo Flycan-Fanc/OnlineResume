@@ -18,7 +18,7 @@ body {
 .sidebar-container {
   width: 100%;
   padding: 1rem;
-  background-color: pink;
+  background-color: #e5e5e5;
 }
 .mobile-menu-btn {
   display: block; /* 移动端显示汉堡按钮 */
@@ -26,11 +26,11 @@ body {
 .content-container {
   width: 100%;
   padding: 1rem;
-  background-color: skyblue;
+  background-color: #e5e5e5;
 }
 
 /* 平板适配 (768px+) */
-@media (min-width: 48em) {
+@media (min-width: 48em) and (max-width: 63.999em) {
   .container {
     display: flex;
     align-items: center;
@@ -99,7 +99,7 @@ body {
   width: 100%;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 48em) and (max-width: 63.999em) {
   .sidebar {
     position: absolute;
     left: 0;
@@ -113,14 +113,14 @@ body {
 }
 
 @media (min-width: 64em) {
-  .sidebar {
+  /* .sidebar {
     position: absolute;
     top: 1em;
     left: 8vw;
     width: 280px;
     min-width: 250px;
     height: 96vh;
-  }
+  } */
 }
 
 /* 内容区域布局*/
@@ -129,7 +129,7 @@ body {
   width: 100%;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 48em) and (max-width: 63.999em) {
   .content {
     position: absolute;
     top: 1em;
@@ -273,7 +273,7 @@ body {
 }
 
 /* 侧边栏 —— 平板适配 */
-@media (min-width: 48em) {
+@media (min-width: 48em) and (max-width: 63.999em) {
   .sidebar {
     display: flex;
     flex-direction: column;
@@ -307,6 +307,9 @@ body {
   .sidebar .profile {
     display: flex;
     margin-bottom: 3em;
+  }
+  .sidebar .profile .intro {
+    display: none;
   }
   .sidebar .profile img {
     width: 4em;
@@ -348,32 +351,103 @@ body {
 /* 侧边栏-pc适配 */
 @media (min-width: 64em) {
   .sidebar {
+    position: absolute;
+    top: 1em;
+    left: 10vw;
+    width: 18vw;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     height: 96vh;
     transition: none;
-    overflow: hidden;
-    background-color: red;
+    overflow: visible;
   }
   .sidebar .mobile-menu-btn {
     display: none;
   }
   .sidebar .theme-switcher {
-    position: relative;
-    right: 10%;
-    top: 20%;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    display: visible;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidebar .theme-switcher img {
+    width: 2em;
+    height: 2em;
   }
   .sidebar .profile {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
+    margin-top: 2.5em;
   }
   .sidebar .profile img {
-    width: 60%;
-    height: 60%;
-    border-radius: 0;
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+  }
+  .sidebar .profile .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 1.5em;
+    gap: 0.5em;
+  }
+  .sidebar .profile .intro .intro-myname {
+    align-self: center;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .sidebar .profile .intro .intro-post {
+    align-self: center;
+    font-size: 1em;
+    color: #707070;
+  }
+  .sidebar .profile .intro .intro-contact {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875em;
+    gap: 0.4em;
+    margin-left: 0.5em;
+  }
+  .sidebar .profile .intro .intro-contact .in-co-content {
+    color: #343434;
+  }
+  .sidebar .profile .intro .intro-contact i {
+    margin-right: 0.5em;
+  }
+  .sidebar .main-nav {
+    display: flex;
+    width: 100%;
+    margin-top: 1em;
+    justify-content: center;
+  }
+  .main-nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-nav a:hover {
+    width: 90%;
+    border-radius: 0.5em;
+    background-color: #ededed;
+  }
+  .main-nav a:active {
+    background-color: #0063f7;
+  }
+  /* 高亮当前 hash 对应的菜单项 */
+  .main-nav a[href]:target {
+    color: #007bff;
+    font-weight: bold;
   }
 }
