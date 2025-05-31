@@ -8,6 +8,7 @@
 }
 
 body {
+  height: 100%;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   background-color: #e5e5e5;
@@ -16,46 +17,51 @@ body {
 /* 基础布局 */
 
 /* 移动端 */
-.container {
-  display: block;
-}
-.container .sidebar-container {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  padding: 1rem;
-  background-color: #e5e5e5;
-}
-.mobile-menu-btn {
-  display: block; /* 移动端显示汉堡按钮 */
-}
-.content-container {
-  width: 100%;
-  padding: 1rem;
-  padding-top: 0;
-  background-color: #e5e5e5;
+@media (max-width: 47.999rem) {
+  .container {
+    display: block;
+  }
+  .container .sidebar-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: #e5e5e5;
+  }
+  .mobile-menu-btn {
+    display: block; /* 移动端显示汉堡按钮 */
+  }
+  .content-container {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 0;
+    background-color: #e5e5e5;
+  }
 }
 
 /* 平板适配 (768px+) */
 @media (min-width: 48em) and (max-width: 63.999em) {
   .container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     height: 100vh;
   }
-  .sidebar-container {
+  .container .sidebar-container {
     position: fixed;
-    width: 100px;
-    height: 100vh;
-  }
-  .content-container {
-    position: static;
     top: 0;
-    width: calc(100% - 200px);
-    min-width: 600px;
+    left: 0;
+    flex: 0 0 10vw;
+    width: 10vw;
     height: 100vh;
-    margin: 0 auto;
-    margin-right: 50px;
+    margin: 0;
+    padding: 0;
+  }
+  .container .content-container {
+    flex: 0 0 90vw;
+    height: 100vh;
+    width: 90vw;
+    margin-left: 10vw;
     display: flex;
     justify-content: center;
   }
@@ -72,11 +78,14 @@ body {
   }
   .sidebar-container {
     position: fixed;
+    top: 0;
+    left: 0;
     flex: 0 0 30vw;
     width: 30vw;
     height: 100vh;
     margin: 0;
     padding: 0;
+    z-index: 2;
   }
   .content-container {
     position: sticky;
@@ -86,6 +95,7 @@ body {
     width: 70vw;
     height: 100vh;
     padding-left: 0;
+    z-index: 1;
   }
   .mobile-menu-btn {
     display: none; /* PC端隐藏汉堡按钮 */
@@ -100,53 +110,23 @@ body {
   display: block;
 }
 
-/* 侧边栏布局 */
-.sidebar {
-  background-color: #f7f7f7;
-  width: 100%;
-}
-
-@media (min-width: 48em) and (max-width: 63.999em) {
-  .sidebar {
-    position: absolute;
-    left: 0;
-    top: 1em;
-    width: 100%;
-    height: 96vh;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 64em) {
-  /* .sidebar {
-    position: absolute;
-    top: 1em;
-    left: 8vw;
-    width: 280px;
-    min-width: 250px;
-    height: 96vh;
-  } */
-}
-
 /* 内容区域布局*/
-.content {
+.content-container .content {
   background-color: #f7f7f7;
   width: 100%;
 }
 
 @media (min-width: 48em) and (max-width: 63.999em) {
-  .content {
-    position: absolute;
+  .content-container .content {
+    position: sticky;
     top: 1em;
-    width: 95%;
+    width: 90%;
     height: 96vh;
   }
 }
 
 @media (min-width: 64em) {
-  .content {
+  .content-container .content {
     position: absolute;
     top: 1em;
     width: 88%;
@@ -216,7 +196,7 @@ body {
   width: 2.5em;
   height: 2.5em;
   border-radius: 50%;
-  background-color: #f7f7f7;
+  box-sizing: border-box;
 }
 
 .theme-switcher > img {
@@ -280,6 +260,13 @@ body {
   justify-content: flex-start;
   align-items: center;
   width: 6em;
+}
+
+/* 侧边栏布局 */
+/* 移动端 */
+.sidebar {
+  background-color: #f7f7f7;
+  width: 100%;
 }
 
 /* 侧边栏 —— 平板适配 */
@@ -468,11 +455,15 @@ body {
   box-sizing: border-box;
   padding: 1em;
   background-color: #f7f7f7;
+  width: 100%;
 }
 
 /* 右侧内容区样式 */
 /* Home样式 */
 @media (max-width: 47.999em) {
+  #home {
+    width: 100%;
+  }
   #home .greeting {
     display: flex;
     flex-direction: column;
@@ -553,24 +544,164 @@ body {
     font-size: 2em;
   }
   #home .hobby .photo-card {
+    display: flex;
+    flex-direction: column;
     width: 90%;
-    height: 8rem;
-    background-color: turquoise;
+  }
+  #home .hobby .photo-card .photo {
+    font-size: 1.5em;
+  }
+  #home .hobby .photo-card img {
+    width: 100%;
   }
   #home .hobby .music-card {
+    display: flex;
+    flex-direction: column;
     width: 90%;
-    height: 8rem;
-    background-color: rgb(224, 160, 64);
+  }
+  #home .hobby .music-card .music {
+    align-self: flex-end;
+    font-size: 1.5em;
+  }
+  #home .hobby .music-card img {
+    width: 100%;
+  }
+  #home .hobby .music-card .statement {
+    font-size: 1rem;
+    margin-top: 0.25rem;
   }
   #home .hobby .game-card {
+    display: flex;
+    flex-direction: column;
     width: 90%;
-    height: 8rem;
-    background-color: rgb(117, 64, 224);
+  }
+  #home .hobby .game-card .game {
+    font-size: 1.5em;
+  }
+  #home .hobby .game-card .img {
+    width: 100%;
   }
 }
 
 @media (min-width: 48em) and (max-width: 63.999em) {
+  #home .greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+  }
+  #home .greeting .greeting-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25em;
+    width: 80%;
+    font-weight: bold;
+  }
+  #home .greeting .greeting-left .greet {
+    font-size: 1.75rem;
+  }
+  #home .greeting .greeting-left .myName {
+    font-size: 2.5rem;
+  }
+  #home .greeting .greeting-left .post {
+    font-size: 1.5rem;
+    color: #3d3d3d;
+  }
+  #home .greeting .greeting-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    width: 100%;
+  }
+  #home .greeting .greeting-right img {
+    width: 90%;
+  }
+  #home .selfIntro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 3em;
+  }
+  #home .selfIntro .selfIntro-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #home .selfIntro .selfIntro-left img {
+    width: 90%;
+  }
+  #home .selfIntro .selfIntro-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+    width: 90%;
+  }
+  #home .selfIntro .selfIntro-right .aboutMe-title {
+    font-size: 2em;
+  }
+  #home .hobby {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 3em;
+    width: 100%;
+  }
+  #home .hobby .hobby-title {
+    align-self: flex-start;
+    margin-left: 5%;
+    font-size: 2em;
+  }
+  #home .hobby .photo-card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  #home .hobby .photo-card .photo {
+    font-size: 1.5em;
+  }
+  #home .hobby .photo-card img {
+    width: 100%;
+  }
+  #home .hobby .music-card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  #home .hobby .music-card .music {
+    align-self: flex-end;
+    font-size: 1.5em;
+  }
+  #home .hobby .music-card img {
+    width: 100%;
+  }
+  #home .hobby .music-card .statement {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+  }
+  #home .hobby .game-card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  #home .hobby .game-card .game {
+    font-size: 1.5em;
+  }
+  #home .hobby .game-card .img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 64em) {
+  
 }

@@ -18,4 +18,3 @@ function highlightActiveMenu() {
 }
 // 页面加载时根据当前 hash 高亮对应菜单
 // highlightActiveMenu();
-
