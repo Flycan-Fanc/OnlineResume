@@ -460,10 +460,10 @@ body {
 
 /* 右侧内容区样式 */
 /* Home样式 */
+#home {
+  width: 100%;
+}
 @media (max-width: 47.999em) {
-  #home {
-    width: 100%;
-  }
   #home .greeting {
     display: flex;
     flex-direction: column;
@@ -702,6 +702,160 @@ body {
   }
 }
 
-@media (min-width: 64em) {
-  
+@media (min-width: 64rem) {
+  #home .greeting {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+    flex-wrap: wrap;
+    gap: 3%;
+  }
+  #home .greeting .greeting-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0.75em;
+    width: 42%;
+    font-weight: bold;
+  }
+  #home .greeting .greeting-left .greet {
+    font-size: 2rem;
+  }
+  #home .greeting .greeting-left .myName {
+    font-size: 3.5rem;
+  }
+  #home .greeting .greeting-left .post {
+    font-size: 1.75rem;
+    color: #3d3d3d;
+  }
+  #home .greeting .greeting-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    width: 42%;
+    background-color: tomato;
+  }
+  #home .greeting .greeting-right img {
+    width: 100%;
+  }
+  #home .selfIntro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+    gap: 2%;
+  }
+  #home .selfIntro .selfIntro-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42%;
+  }
+  #home .selfIntro .selfIntro-left img {
+    width: 100%;
+  }
+  #home .selfIntro .selfIntro-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+    width: 42%;
+  }
+  #home .selfIntro .selfIntro-right .aboutMe-title {
+    font-size: 2em;
+  }
+  #home .hobby {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 2%;
+    grid-row-gap: 1.25em;
+    margin: 0 auto;
+    margin-top: 5em;
+    width: 86%;
+  }
+  #home .hobby .hobby-title {
+    grid-column: span 3;
+    font-size: 2em;
+  }
+  #home .hobby .photo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    aspect-ratio: 1/1.25; /* 宽高比 */
+    border: 1px solid #e2e2e2;
+    cursor: pointer;
+  }
+  #home .hobby .photo-card:hover {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
+  #home .hobby .photo-card .photo {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+  #home .hobby .photo-card img {
+    width: 100%;
+  }
+  #home .hobby .photo-card .statement {
+    font-size: 1rem;
+    margin-top: 0.75rem;
+  }
+  #home .hobby .music-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    aspect-ratio: 1/1.25;
+    border: 1px solid #e2e2e2;
+    cursor: pointer;
+  }
+  #home .hobby .music-card:hover {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
+  #home .hobby .music-card .music {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+  #home .hobby .music-card img {
+    width: 100%;
+  }
+  #home .hobby .music-card .statement {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  #home .hobby .game-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    aspect-ratio: 1/1.25;
+    border: 1px solid #e2e2e2;
+    cursor: pointer;
+  }
+  #home .hobby .game-card:hover {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
+  #home .hobby .game-card .game {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+  #home .hobby .game-card .img {
+    width: 100%;
+  }
 }
