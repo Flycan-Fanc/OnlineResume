@@ -859,3 +859,76 @@ body {
     width: 100%;
   }
 }
+
+/* resume样式 */
+#resume {
+  width: 100%;
+}
+/* 移动端resume样式 */
+@media (max-width: 47.999em) {
+  .education {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .education .title {
+    font-weight: bold;
+  }
+  .education .edu-title {
+    align-self: flex-start;
+    font-size: 2rem;
+  }
+  .education .school {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .education .school .info {
+    font-size: 1.2rem;
+  }
+  .education .course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .education .course .list {
+    align-self: center;
+  }
+  .education .thesis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .education .thesis .content {
+    text-align: center;
+  }
+  .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  .skill .skill-title {
+    align-self: flex-start;
+    font-size: 2rem;
+  }
+  .honor {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  .honor .honor-title {
+    align-self: flex-start;
+    font-size: 2rem;
+  }
+}
