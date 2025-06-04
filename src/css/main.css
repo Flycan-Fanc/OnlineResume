@@ -793,6 +793,7 @@ body {
     aspect-ratio: 1/1.25; /* 宽高比 */
     border: 1px solid #e2e2e2;
     cursor: pointer;
+    transition: all 0.5s ease-out;
   }
   #home .hobby .photo-card:hover {
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
@@ -818,6 +819,7 @@ body {
     aspect-ratio: 1/1.25;
     border: 1px solid #e2e2e2;
     cursor: pointer;
+    transition: all 0.5s ease-out;
   }
   #home .hobby .music-card:hover {
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
@@ -845,6 +847,7 @@ body {
     aspect-ratio: 1/1.25;
     border: 1px solid #e2e2e2;
     cursor: pointer;
+    transition: all 0.5s ease-out;
   }
   #home .hobby .game-card:hover {
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
@@ -864,6 +867,9 @@ body {
 #resume {
   width: 100%;
 }
+#resume .section-wrapper {
+  width: 100%;
+}
 /* 移动端resume样式 */
 @media (max-width: 47.999em) {
   .education {
@@ -871,7 +877,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 1rem;
     gap: 1rem;
   }
   .education .title {
@@ -888,6 +893,9 @@ body {
   }
   .education .school .info {
     font-size: 1.2rem;
+  }
+  .education .school .time {
+    margin-top: 0.15rem;
   }
   .education .course {
     display: flex;
@@ -914,10 +922,42 @@ body {
     align-items: center;
     margin-top: 2rem;
     gap: 1rem;
+    width: 100%;
   }
   .skill .skill-title {
     align-self: flex-start;
     font-size: 2rem;
+  }
+  .skill .skill-section {
+    width: 100%;
+  }
+  .skill .skill-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    list-style: none;
+  }
+  .skill .skill-list .skill-item {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .skill .skill-item .skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+  .skill .skill-item .skill-info .message {
+    display: none;
+  }
+  .skill .skill-item .skill-bar {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
   }
   .honor {
     display: flex;
