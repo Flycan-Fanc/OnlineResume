@@ -72,3 +72,22 @@ menuLink.forEach((link) => {
     skillList.insertAdjacentHTML("beforeend", skillHTML);
   });
 })();
+
+// 将荣誉奖项插入页面
+(function insertHonorBar() {
+  let honorData = [
+    { name: "中国大学生计算机设计大赛（音乐创作普通组）辽宁省一等奖", time: "2021.08" },
+    { name: "国家励志奖学金", time: "2021.11" },
+    { name: "全国大学生数学建模竞赛辽宁省本科组二等奖", time: "2022.10" },
+  ];
+  let honorList = document.querySelector("#resume .honor .honor-list");
+  honorData.forEach((item) => {
+    let honorHTML = `
+    <li class="honor-item">
+        <span class="name">${item.name}</span>
+        <span class="time">(${item.time})</span>
+    </li>
+    `;
+    honorList.insertAdjacentHTML("beforeend", honorHTML);
+  });
+})();
