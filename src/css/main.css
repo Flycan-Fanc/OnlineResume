@@ -1120,3 +1120,129 @@ body {
     font-size: 0.8rem;
   }
 }
+@media (min-width: 64em) {
+  .education {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+  }
+  .education .title {
+    font-weight: bold;
+  }
+  .education .edu-title {
+    align-self: flex-start;
+    font-size: 2rem;
+  }
+  .education .school {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .education .school .info {
+    font-size: 1.2rem;
+  }
+  .education .school .time {
+    margin-top: 0.15rem;
+  }
+  .education .course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .education .course .list {
+    align-self: center;
+  }
+  .education .thesis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    height: auto;
+  }
+  .education .thesis .content {
+    text-align: center;
+    height: auto;
+    width: 100%;
+  }
+  .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+    width: 100%;
+  }
+  .skill .skill-title {
+    align-self: flex-start;
+    font-size: 2rem;
+  }
+  .skill .skill-section {
+    width: 100%;
+  }
+  .skill .skill-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    list-style: none;
+  }
+  .skill .skill-list .skill-item {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .skill .skill-item .skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+  .skill .skill-item .skill-info .message {
+    display: none;
+  }
+  .skill .skill-item .skill-bar {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .skill .skill-other {
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .skill .skill-other .title {
+    align-self: flex-start;
+    font-weight: bold;
+  }
+  .honor {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  .honor .honor-title {
+    align-self: flex-start;
+    font-size: 2rem;
+  }
+  .honor .honor-list {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .honor .honor-list .honor-item .time {
+    font-size: 0.8rem;
+  }
+}
