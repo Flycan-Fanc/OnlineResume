@@ -912,7 +912,7 @@ body {
     align-items: center;
     gap: 0.25rem;
   }
-  .education .thesis .content {
+  .education .thesis .thesis-content {
     text-align: center;
   }
   .skill {
@@ -1037,7 +1037,7 @@ body {
     gap: 0.25rem;
     height: auto;
   }
-  .education .thesis .content {
+  .education .thesis .thesis-content {
     text-align: center;
     height: auto;
     width: 100%;
@@ -1121,7 +1121,13 @@ body {
   }
 }
 @media (min-width: 64em) {
+  #resume .section-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
   .education {
+    grid-column: 1 / 3;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1163,10 +1169,10 @@ body {
     gap: 0.25rem;
     height: auto;
   }
-  .education .thesis .content {
-    text-align: center;
+  .education .thesis .thesis-content {
+    align-self: center;
     height: auto;
-    width: 100%;
+    width: auto;
   }
   .skill {
     display: flex;
