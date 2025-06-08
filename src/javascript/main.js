@@ -84,8 +84,11 @@ menuLink.forEach((link) => {
   honorData.forEach((item) => {
     let honorHTML = `
     <li class="honor-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="time"><em>(${item.time})</em></span>
         <span class="name">${item.name}</span>
-        <span class="time">(${item.time})</span>
+      </div>
     </li>
     `;
     honorList.insertAdjacentHTML("beforeend", honorHTML);

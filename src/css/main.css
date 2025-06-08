@@ -988,6 +988,45 @@ body {
     width: 80%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    padding-left: 20px;
+  }
+  .honor .honor-list::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #3498db;
+  }
+  .honor .honor-list .honor-item {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .honor .honor-list .honor-item .timeline-dot {
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #3498db;
+  }
+  .honor .honor-list .honor-item .timeline-content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: solid 1px #d8d8d8;
+    border-radius: 2px;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: all 0.5s ease-out;
+  }
+  .honor .honor-list .honor-item .timeline-content:hover {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    background-color: #fff;
   }
   .honor .honor-list .honor-item .time {
     font-size: 0.8rem;
@@ -1105,6 +1144,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     gap: 1rem;
   }
   .honor .honor-title {
@@ -1115,6 +1155,45 @@ body {
     width: 80%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    padding-left: 20px;
+  }
+  .honor .honor-list::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #3498db;
+  }
+  .honor .honor-list .honor-item {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .honor .honor-list .honor-item .timeline-dot {
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #3498db;
+  }
+  .honor .honor-list .honor-item .timeline-content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: solid 1px #d8d8d8;
+    border-radius: 2px;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: all 0.5s ease-out;
+  }
+  .honor .honor-list .honor-item .timeline-content:hover {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    background-color: #fff;
   }
   .honor .honor-list .honor-item .time {
     font-size: 0.8rem;
@@ -1125,6 +1204,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+    padding: 2rem;
   }
   .education {
     grid-column: 1 / 3;
@@ -1181,11 +1261,13 @@ body {
     align-items: center;
     margin-top: 2rem;
     gap: 1rem;
-    width: 100%;
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
   }
   .skill .skill-title {
-    align-self: flex-start;
-    font-size: 2rem;
+    align-self: center;
+    font-size: 1.5rem;
   }
   .skill .skill-section {
     width: 100%;
@@ -1238,15 +1320,60 @@ body {
     align-items: center;
     margin-top: 2rem;
     gap: 1rem;
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
   }
   .honor .honor-title {
-    align-self: flex-start;
-    font-size: 2rem;
+    align-self: center;
+    font-size: 1.5rem;
   }
   .honor .honor-list {
     width: 80%;
+    align-self: center;
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+  }
+  .honor .honor-list::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #3498db;
+  }
+  .honor .honor-list .honor-item {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .honor .honor-list .honor-item .timeline-dot {
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #3498db;
+  }
+  .honor .honor-list .honor-item .timeline-content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: solid 1px #d8d8d8;
+    border-radius: 2px;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: all 0.5s ease-out;
+  }
+  .honor .honor-list .honor-item .timeline-content:hover {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    background-color: #fff;
   }
   .honor .honor-list .honor-item .time {
     font-size: 0.8rem;
