@@ -138,20 +138,47 @@
           <section id="portfolio">
             <div class="section-wrapper">
               <div class="header">作品集</div>
-              <span class="myday">1.MyDay</span>
-              <span class="userCenter">2.用户中心</span>
-              <span class="mbti">3.MBTI小程序</span>
-              <span class="wuliu">4.android物流</span>
-              <span class="music">5.毛玻璃风格音乐网站</span>
+              <div class="content">
+                <span class="myday">1.MyDay</span>
+                <span class="userCenter">2.用户中心</span>
+                <span class="mbti">3.MBTI小程序</span>
+                <span class="wuliu">4.android物流</span>
+                <span class="music">5.毛玻璃风格音乐网站</span>
+              </div>
             </div>
           </section>
           <section id="contact">
-            <div class="section-wrapper">1.联系方式 2.发送信息</div>
+            <div class="section-wrapper">
+              1.联系方式 2.发送信息
+              <div class="emailSender-container">
+                <form id="form">
+                  <div class="field">
+                    <label for="name">name</label>
+                    <input type="text" name="name" id="name" />
+                  </div>
+                  <div class="field">
+                    <label for="time">time</label>
+                    <input type="text" name="time" id="time" />
+                  </div>
+                  <div class="field">
+                    <label for="message">message</label>
+                    <input type="text" name="message" id="message" />
+                  </div>
+                  <div class="field">
+                    <label for="from">from</label>
+                    <input type="text" name="from" id="from" />
+                  </div>
+
+                  <input type="submit" id="button" value="Send Email" />
+                </form>
+              </div>
+            </div>
           </section>
         </main>
       </div>
     </div>
 
     <script src="javascript/main.js"></script>
+    <script src="javascript/emailJS.js"></script>
   </body>
 </html>
