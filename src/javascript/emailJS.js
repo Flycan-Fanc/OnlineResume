@@ -1,22 +1,20 @@
-import { EMAILJS_USER_ID, EMAILJS_TEMPLATE_KEY } from "./config.js";
-
 const btn = document.getElementById("button");
 
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  btn.value = "Sending...";
+  btn.value = "发送中...";
 
-  const serviceID = EMAILJS_USER_ID;
-  const templateID = EMAILJS_TEMPLATE_KEY;
+  const serviceID = "service_88rmdae";
+  const templateID = "template_7zs6n2h";
 
   emailjs.sendForm(serviceID, templateID, this).then(
     () => {
-      btn.value = "Send Email";
+      btn.value = "发送邮件";
       alert("Sent!");
     },
     (err) => {
-      btn.value = "Send Email";
+      btn.value = "发送邮件";
       alert(JSON.stringify(err));
     }
   );
