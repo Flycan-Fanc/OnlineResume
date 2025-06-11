@@ -149,27 +149,27 @@
           </section>
           <section id="contact">
             <div class="section-wrapper">
-              1.联系方式 2.发送信息
+              <div class="contact-info-container">
+                <span class="phone"><i class="fa fa-phone" aria-hidden="true"></i><span class="in-co-content"> 联系电话: 19264523091</span></span>
+                <span class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="in-co-content"> 邮箱: fanhlwork@163.com</span></span>
+                <span class="github"><i class="fa fa-github"></i><span class="in-co-content"> GitHub: Flycan-Fanc</span></span>
+              </div>
               <div class="emailSender-container">
                 <form id="form">
                   <div class="field">
-                    <label for="name">name</label>
-                    <input type="text" name="name" id="name" />
+                    <label for="from_name">您的姓名</label>
+                    <input type="text" name="from_name" id="from_name" />
                   </div>
                   <div class="field">
-                    <label for="time">time</label>
-                    <input type="text" name="time" id="time" />
+                    <label for="from_email">您的邮箱</label>
+                    <input type="text" name="from_email" id="from_email" />
                   </div>
                   <div class="field">
-                    <label for="message">message</label>
+                    <label for="message">信息</label>
                     <input type="text" name="message" id="message" />
                   </div>
-                  <div class="field">
-                    <label for="from">from</label>
-                    <input type="text" name="from" id="from" />
-                  </div>
 
-                  <input type="submit" id="button" value="Send Email" />
+                  <input type="submit" id="button" value="发送邮件" />
                 </form>
               </div>
             </div>
@@ -180,5 +180,9 @@
 
     <script src="javascript/main.js"></script>
     <script src="javascript/emailJS.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init("KdcTB37mjsRQb1lCT");
+    </script>
   </body>
 </html>
