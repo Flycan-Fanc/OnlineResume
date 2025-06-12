@@ -1380,15 +1380,237 @@ body {
   }
 }
 
-/* emailJS */
-.field {
-  margin-bottom: 10px;
+/* contact样式 */
+#contact {
+  width: 100%;
+}
+#contact .section-wrapper {
+  width: 100%;
+}
+/* 移动端contact样式 */
+@media (max-width: 47.999em) {
+  #contact .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    box-sizing: border-box;
+    height: auto;
+  }
+  #contact .title {
+    align-self: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .contact-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    margin-bottom: 2rem;
+    font-size: 1.15rem;
+  }
+  .contact-info-container .github {
+    cursor: pointer;
+  }
+  .contact-info-container .github a {
+    text-decoration: none;
+    color: #000;
+  }
+  .emailSender-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .emailSender-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+  }
+  .emailSender-container form .field {
+    width: 100%;
+  }
+  .emailSender-container form input[type="text"],
+  textarea {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 35px;
+    border: solid 1px #e0e0e0;
+    border-radius: 5px;
+    text-indent: 1rem;
+    font-family: "Poppins", sans-serif; /* 字体需要单独设置，否则不生效*/
+  }
+  .emailSender-container form textarea {
+    height: 100px;
+    padding: 1rem;
+    text-indent: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  .emailSender-container form textarea::placeholder {
+    font-family: "Poppins", sans-serif;
+  }
 }
 
-.field label {
-  display: block;
-  font-size: 12px;
-  color: #777;
+/* pad端contact样式 */
+@media (min-width: 48em) and (max-width: 63.999em) {
+  #contact .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    box-sizing: border-box;
+    height: auto;
+  }
+  #contact .title {
+    align-self: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .contact-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.15rem;
+  }
+  .contact-info-container .github {
+    cursor: pointer;
+  }
+  .contact-info-container .github a {
+    text-decoration: none;
+    color: #000;
+  }
+  .emailSender-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    border-top: solid 1px #d8d8d8;
+    padding-top: 1.5rem;
+    box-sizing: border-box;
+  }
+  .emailSender-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+  }
+  .emailSender-container form .field {
+    width: 100%;
+  }
+  .emailSender-container form input[type="text"],
+  textarea {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 35px;
+    border: solid 1px #e0e0e0;
+    border-radius: 5px;
+    text-indent: 1rem;
+    font-family: "Poppins", sans-serif; /* 字体需要单独设置，否则不生效*/
+  }
+  .emailSender-container form textarea {
+    height: 200px;
+    padding: 1rem;
+    text-indent: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  .emailSender-container form textarea::placeholder {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+/* pc端contact样式 */
+@media (min-width: 64em) {
+  #contact .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    box-sizing: border-box;
+    height: auto;
+  }
+  #contact .title {
+    align-self: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .contact-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.15rem;
+  }
+  .contact-info-container .github {
+    cursor: pointer;
+  }
+  .contact-info-container .github a {
+    text-decoration: none;
+    color: #000;
+  }
+  .emailSender-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    border-top: solid 1px #d8d8d8;
+    padding-top: 1.5rem;
+    box-sizing: border-box;
+  }
+  .emailSender-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+  }
+  .emailSender-container form .field {
+    width: 100%;
+  }
+  .emailSender-container form input[type="text"],
+  textarea {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 35px;
+    border: solid 1px #e0e0e0;
+    border-radius: 5px;
+    text-indent: 1rem;
+    font-family: "Poppins", sans-serif; /* 字体需要单独设置，否则不生效*/
+  }
+  .emailSender-container form textarea {
+    height: 200px;
+    padding: 1rem;
+    text-indent: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  .emailSender-container form textarea::placeholder {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+/* emailJS */
+/* .field {
+  margin-bottom: 10px;
 }
 
 .field input {
@@ -1396,7 +1618,7 @@ body {
   min-width: 250px;
   line-height: 1.5;
   font-size: 14px;
-}
+} */
 
 input[type="submit"] {
   display: block;
