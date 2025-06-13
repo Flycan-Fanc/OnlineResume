@@ -94,3 +94,27 @@ menuLink.forEach((link) => {
     honorList.insertAdjacentHTML("beforeend", honorHTML);
   });
 })();
+
+// 将作品集卡片插入页面
+(function insertPotfolioBar() {
+  let portfolioData = [
+    { name: "myday", pictureSrc: "assets/img/kazuha.png", pictureAlt: "Myday", title: "MyDay", description: "", linkUrl: "" },
+    { name: "userCenter", pictureSrc: "assets/img/kazuha.png", pictureAlt: "用户中心", title: "用户中心", description: "", linkUrl: "" },
+    { name: "mbti", pictureSrc: "assets/img/kazuha.png", pictureAlt: "MBTI小程序", title: "MBTI小程序", description: "", linkUrl: "" },
+    { name: "wuliu", pictureSrc: "assets/img/kazuha.png", pictureAlt: "物流管理系统安卓APP", title: "物流管理系统安卓APP", description: "", linkUrl: "" },
+    { name: "glass-music", pictureSrc: "assets/img/kazuha.png", pictureAlt: "毛玻璃风格音乐网站", title: "毛玻璃风格音乐网站", description: "", linkUrl: "" },
+  ];
+  let portfolioList = document.querySelector("#portfolio .card-container");
+  portfolioData.forEach((item) => {
+    let portfolioHTML = `
+    <div class="${item.name} pot-card">
+      <span class="picture"><img src=${item.pictureSrc} alt=${item.pictureAlt} /></span>
+      <span class="info">
+        <span class="card-title">${item.title}</span>
+        <span class="card-desc">${item.description}</span>
+      </span>
+    </div>
+    `;
+    portfolioList.insertAdjacentHTML("beforeend", portfolioHTML);
+  });
+})();
