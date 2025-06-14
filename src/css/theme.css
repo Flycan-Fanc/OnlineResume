@@ -1,0 +1,61 @@
+:root {
+  /* 基础背景 & 文字 */
+  --bgc-body: #e5e5e5;
+  --bgc-content: #f7f7f7;
+  --text-color: #000;
+  --text-color-secondary: #3d3d3d;
+  --text-color-third: #707070;
+  --text-color-fourth: #343434;
+  --box-shadow: #707070;
+
+  /* 侧边栏 */
+  --sidebar-active-bgc: #0063f7;
+  --sidebar-active-color: #f7f7f7;
+  --sidebar-hover-bgc: #ededed;
+
+  /* 卡片 */
+  --card-border: #e2e2e2;
+  --card-border-secondary: #d8d8d8;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --card-hover-bgc: #fff;
+
+  /* 时间轴 */
+  --timeline-bgc: #3498db;
+  --timeline-bgc-secondary: #fff;
+
+  /* 其他元素 */
+  --skillbar-bgc: #e0e0e0;
+  --link-color: #000;
+  --input-border: #e0e0e0;
+}
+
+:root.dark {
+  /* 基础背景 & 文字 */
+  --bgc-body: #1a1a1a;
+  --bgc-content: #2d2d2d;
+  --text-color: #f0f0f0;
+  --text-color-secondary: #c2c2c2;
+  --text-color-third: #8f8f8f;
+  --text-color-fourth: #cbcbcb;
+  --box-shadow: rgba(0, 0, 0, 0.6);
+
+  /* 侧边栏 */
+  --sidebar-active-bgc: #3a8cff;
+  --sidebar-active-color: #2d2d2d;
+  --sidebar-hover-bgc: #3d3d3d;
+
+  /* 卡片 */
+  --card-border: #444;
+  --card-border-secondary: #555;
+  --card-shadow: rgba(0, 0, 0, 0.5);
+  --card-hover-bgc: #383838;
+
+  /* 时间轴 */
+  --timeline-bgc: #5dade2;
+  --timeline-bgc-secondary: #2d2d2d;
+
+  /* 其他元素 */
+  --skillbar-bgc: #444;
+  --link-color: #f0f0f0;
+  --input-border: #555;
+}

@@ -18,3 +18,9 @@ function highlightActiveMenu() {
 }
 // 页面加载时根据当前 hash 高亮对应菜单
 // highlightActiveMenu();
+
+// 初始化主题
+let theme = localStorage.getItem("theme");
+if (theme === "dark") {
+  document.documentElement.classList.add("dark");
+}
