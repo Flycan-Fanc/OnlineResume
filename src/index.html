@@ -155,13 +155,11 @@
                 <span class="message title">留 言</span>
                 <form id="form">
                   <div class="field">
-                    <input type="text" name="from_name" id="from_name" placeholder="您的姓名" />
+                    <input type="text" name="from_name" id="from_name" placeholder="您的姓名" required />
                   </div>
+                  <div class="field"><input type="text" name="from_email" id="from_email" placeholder="您的邮箱" required pattern="^\w[\w\-\.]*@[\w\-]+\.[\w\-\.]+$" title="邮箱格式不正确" /></div>
                   <div class="field">
-                    <input type="text" name="from_email" id="from_email" placeholder="您的邮箱" />
-                  </div>
-                  <div class="field">
-                    <textarea type="text" name="message" id="message" placeholder="消息内容"></textarea>
+                    <textarea type="text" name="message" id="message" placeholder="消息内容" required></textarea>
                   </div>
                   <input type="submit" id="button" value="发送邮件" />
                 </form>

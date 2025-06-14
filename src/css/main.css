@@ -11,7 +11,8 @@ body {
   height: 100%;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  background-color: #e5e5e5;
+  background-color: var(--bgc-body);
+  color: var(--text-color);
 }
 
 /* 基础布局 */
@@ -26,7 +27,7 @@ body {
     top: 0;
     width: 100%;
     padding: 1rem;
-    background-color: #e5e5e5;
+    background-color: var(--bgc-body);
   }
   .mobile-menu-btn {
     display: block; /* 移动端显示汉堡按钮 */
@@ -35,7 +36,7 @@ body {
     width: 100%;
     padding: 1rem;
     padding-top: 0;
-    background-color: #e5e5e5;
+    background-color: var(--bgc-body);
   }
 }
 
@@ -112,7 +113,7 @@ body {
 
 /* 内容区域布局*/
 .content-container .content {
-  background-color: #f7f7f7;
+  background-color: var(--bgc-content);
   width: 100%;
 }
 
@@ -204,6 +205,7 @@ body {
   height: 2.5em;
   border-radius: 50%;
   display: none;
+  box-shadow: 0 0 5px var(--box-shadow);
 }
 
 .theme-switcher .turnDark_switcher.active {
@@ -252,7 +254,7 @@ body {
   height: 3em;
   width: 100%;
   font-size: 1em;
-  color: #000;
+  color: var(--link-color);
 }
 
 .main-nav .menu-content {
@@ -265,7 +267,7 @@ body {
 /* 侧边栏布局 */
 /* 移动端 */
 .sidebar {
-  background-color: #f7f7f7;
+  background-color: var(--bgc-content);
   width: 100%;
 }
 
@@ -321,7 +323,7 @@ body {
     height: auto;
   }
   .main-nav a.active {
-    background-color: #0063f7;
+    background-color: var(--sidebar-active-bgc);
   }
   .sidebar .main-nav .menu-list {
     display: flex;
@@ -411,7 +413,7 @@ body {
   .sidebar .profile .intro .intro-post {
     align-self: center;
     font-size: 1em;
-    color: #707070;
+    color: var(--text-color-third);
   }
   .sidebar .profile .intro .intro-contact {
     display: flex;
@@ -421,7 +423,7 @@ body {
     margin-left: 0.5em;
   }
   .sidebar .profile .intro .intro-contact .in-co-content {
-    color: #343434;
+    color: var(--text-color-fourth);
   }
   .sidebar .profile .intro .intro-contact i {
     margin-right: 0.5em;
@@ -440,13 +442,13 @@ body {
   .main-nav a:hover {
     width: 90%;
     border-radius: 0.5em;
-    background-color: #ededed;
+    background-color: var(--sidebar-hover-bgc);
   }
   .main-nav a.active {
     width: 90%;
     border-radius: 0.5em;
-    background-color: #0063f7;
-    color: #f7f7f7;
+    background-color: var(--sidebar-active-bgc);
+    color: var(--sidebar-active-color);
     font-weight: bold;
   }
 }
@@ -454,7 +456,7 @@ body {
 .section-wrapper {
   box-sizing: border-box;
   padding: 1em;
-  background-color: #f7f7f7;
+  background-color: var(--bgc-content);
   width: 100%;
 }
 
@@ -489,7 +491,7 @@ body {
   }
   #home .greeting .greeting-left .post {
     font-size: 1.25rem;
-    color: #3d3d3d;
+    color: var(--text-color-secondary);
     margin-top: 0.5em;
   }
   #home .greeting .greeting-right {
@@ -609,7 +611,7 @@ body {
   }
   #home .greeting .greeting-left .post {
     font-size: 1.5rem;
-    color: #3d3d3d;
+    color: var(--text-color-secondary);
   }
   #home .greeting .greeting-right {
     display: flex;
@@ -730,7 +732,7 @@ body {
   }
   #home .greeting .greeting-left .post {
     font-size: 1.75rem;
-    color: #3d3d3d;
+    color: var(--text-color-secondary);
   }
   #home .greeting .greeting-right {
     display: flex;
@@ -738,7 +740,6 @@ body {
     align-items: center;
     margin-top: 2em;
     width: 42%;
-    background-color: tomato;
   }
   #home .greeting .greeting-right img {
     width: 100%;
@@ -791,13 +792,13 @@ body {
     align-items: center;
     width: 95%;
     aspect-ratio: 1/1.25; /* 宽高比 */
-    border: 1px solid #e2e2e2;
+    border: 1px solid var(--card-border);
     cursor: pointer;
     transition: all 0.5s ease-out;
   }
   #home .hobby .photo-card:hover {
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-    background-color: #fff;
+    box-shadow: 0 0 0.5rem var(--card-shadow);
+    background-color: var(--card-hover-bgc);
   }
   #home .hobby .photo-card .photo {
     font-size: 1.5em;
@@ -817,13 +818,13 @@ body {
     align-items: center;
     width: 95%;
     aspect-ratio: 1/1.25;
-    border: 1px solid #e2e2e2;
+    border: 1px solid var(--card-border);
     cursor: pointer;
     transition: all 0.5s ease-out;
   }
   #home .hobby .music-card:hover {
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-    background-color: #fff;
+    box-shadow: 0 0 0.5rem var(--card-shadow);
+    background-color: var(--card-hover-bgc);
   }
   #home .hobby .music-card .music {
     font-size: 1.5em;
@@ -845,13 +846,13 @@ body {
     align-items: center;
     width: 95%;
     aspect-ratio: 1/1.25;
-    border: 1px solid #e2e2e2;
+    border: 1px solid var(--card-border);
     cursor: pointer;
     transition: all 0.5s ease-out;
   }
   #home .hobby .game-card:hover {
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-    background-color: #fff;
+    box-shadow: 0 0 0.5rem var(--card-shadow);
+    background-color: var(--card-hover-bgc);
   }
   #home .hobby .game-card .game {
     font-size: 1.5em;
@@ -955,7 +956,7 @@ body {
   .skill .skill-item .skill-bar {
     width: 100%;
     height: 0.5rem;
-    background-color: #e0e0e0;
+    background-color: var(--skillbar-bgc);
     border-radius: 5px;
     overflow: hidden;
   }
@@ -998,7 +999,7 @@ body {
     top: 0;
     height: 100%;
     width: 2px;
-    background: #3498db;
+    background: var(--timeline-bgc);
   }
   .honor .honor-list .honor-item {
     position: relative;
@@ -1011,22 +1012,22 @@ body {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #fff;
-    border: 3px solid #3498db;
+    background: var(--timeline-bgc-secondary);
+    border: 3px solid var(--timeline-bgc);
   }
   .honor .honor-list .honor-item .timeline-content {
     display: flex;
     flex-direction: column;
     height: auto;
-    border: solid 1px #d8d8d8;
+    border: solid 1px var(--card-border-secondary);
     border-radius: 2px;
     padding: 8px;
     box-sizing: border-box;
     transition: all 0.5s ease-out;
   }
   .honor .honor-list .honor-item .timeline-content:hover {
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-    background-color: #fff;
+    box-shadow: 0 0 0.5rem var(--card-shadow);
+    background-color: var(--card-hover-bgc);
   }
   .honor .honor-list .honor-item .time {
     font-size: 0.8rem;
@@ -1121,7 +1122,7 @@ body {
   .skill .skill-item .skill-bar {
     width: 100%;
     height: 0.5rem;
-    background-color: #e0e0e0;
+    background-color: var(--skillbar-bgc);
     border-radius: 5px;
     overflow: hidden;
   }
@@ -1165,7 +1166,7 @@ body {
     top: 0;
     height: 100%;
     width: 2px;
-    background: #3498db;
+    background: var(--timeline-bgc);
   }
   .honor .honor-list .honor-item {
     position: relative;
@@ -1178,22 +1179,22 @@ body {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #fff;
-    border: 3px solid #3498db;
+    background: var(--timeline-bgc-secondary);
+    border: 3px solid var(--timeline-bgc);
   }
   .honor .honor-list .honor-item .timeline-content {
     display: flex;
     flex-direction: column;
     height: auto;
-    border: solid 1px #d8d8d8;
+    border: solid 1px var(--card-border-secondary);
     border-radius: 2px;
     padding: 8px;
     box-sizing: border-box;
     transition: all 0.5s ease-out;
   }
   .honor .honor-list .honor-item .timeline-content:hover {
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-    background-color: #fff;
+    box-shadow: 0 0 0.5rem var(--card-shadow);
+    background-color: var(--timeline-bgc-secondary);
   }
   .honor .honor-list .honor-item .time {
     font-size: 0.8rem;
@@ -1296,7 +1297,7 @@ body {
   .skill .skill-item .skill-bar {
     width: 100%;
     height: 0.5rem;
-    background-color: #e0e0e0;
+    background-color: var(--skillbar-bgc);
     border-radius: 5px;
     overflow: hidden;
   }
@@ -1345,7 +1346,7 @@ body {
     top: 0;
     height: 100%;
     width: 2px;
-    background: #3498db;
+    background: var(--timeline-bgc);
   }
   .honor .honor-list .honor-item {
     position: relative;
@@ -1358,22 +1359,22 @@ body {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #fff;
-    border: 3px solid #3498db;
+    background: var(--timeline-bgc-secondary);
+    border: 3px solid var(--timeline-bgc);
   }
   .honor .honor-list .honor-item .timeline-content {
     display: flex;
     flex-direction: column;
     height: auto;
-    border: solid 1px #d8d8d8;
+    border: solid 1px var(--card-border-secondary);
     border-radius: 2px;
     padding: 8px;
     box-sizing: border-box;
     transition: all 0.5s ease-out;
   }
   .honor .honor-list .honor-item .timeline-content:hover {
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-    background-color: #fff;
+    box-shadow: 0 0 0.5rem var(--card-shadow);
+    background-color: var(--timeline-bgc-secondary);
   }
   .honor .honor-list .honor-item .time {
     font-size: 0.8rem;
@@ -1408,14 +1409,14 @@ body {
   display: flex;
   width: 90%;
   height: 150px;
-  border: solid 1px #d8d8d8;
+  border: solid 1px var(--card-border-secondary);
   border-radius: 5px;
   transition: all 0.5s ease-out;
   cursor: pointer;
 }
 #portfolio .card-container .pot-card:hover {
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-  background-color: #fff;
+  box-shadow: 0 0 0.5rem var(--card-shadow);
+  background-color: var(--card-hover-bgc);
 }
 #portfolio .card-container .pot-card .picture {
   flex: 1;
@@ -1496,7 +1497,7 @@ body {
   }
   .contact-info-container .github a {
     text-decoration: none;
-    color: #000;
+    color: var(--link-color);
   }
   .emailSender-container {
     display: flex;
@@ -1523,7 +1524,7 @@ body {
     margin: 0 auto;
     width: 80%;
     height: 35px;
-    border: solid 1px #e0e0e0;
+    border: solid 1px var(--input-border);
     border-radius: 5px;
     text-indent: 1rem;
     font-family: "Poppins", sans-serif; /* 字体需要单独设置，否则不生效*/
@@ -1568,7 +1569,7 @@ body {
   }
   .contact-info-container .github a {
     text-decoration: none;
-    color: #000;
+    color: var(--link-color);
   }
   .emailSender-container {
     display: flex;
@@ -1577,7 +1578,7 @@ body {
     align-items: center;
     margin-bottom: 2rem;
     width: 100%;
-    border-top: solid 1px #d8d8d8;
+    border-top: solid 1px var(--card-border-secondary);
     padding-top: 1.5rem;
     box-sizing: border-box;
   }
@@ -1598,7 +1599,7 @@ body {
     margin: 0 auto;
     width: 80%;
     height: 35px;
-    border: solid 1px #e0e0e0;
+    border: solid 1px var(--input-border);
     border-radius: 5px;
     text-indent: 1rem;
     font-family: "Poppins", sans-serif; /* 字体需要单独设置，否则不生效*/
@@ -1643,7 +1644,7 @@ body {
   }
   .contact-info-container .github a {
     text-decoration: none;
-    color: #000;
+    color: var(--link-color);
   }
   .emailSender-container {
     display: flex;
@@ -1652,7 +1653,7 @@ body {
     align-items: center;
     margin-bottom: 2rem;
     width: 100%;
-    border-top: solid 1px #d8d8d8;
+    border-top: solid 1px var(--card-border-secondary);
     padding-top: 1.5rem;
     box-sizing: border-box;
   }
@@ -1673,7 +1674,7 @@ body {
     margin: 0 auto;
     width: 80%;
     height: 35px;
-    border: solid 1px #e0e0e0;
+    border: solid 1px var(--input-border);
     border-radius: 5px;
     text-indent: 1rem;
     font-family: "Poppins", sans-serif; /* 字体需要单独设置，否则不生效*/
