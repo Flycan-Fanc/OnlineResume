@@ -6,6 +6,7 @@
   --text-color-secondary: #3d3d3d;
   --text-color-third: #707070;
   --text-color-fourth: #343434;
+  --text-color-placeholder: #757575;
   --box-shadow: #707070;
 
   /* 侧边栏 */
@@ -27,6 +28,7 @@
   --skillbar-bgc: #e0e0e0;
   --link-color: #000;
   --input-border: #e0e0e0;
+  --input-bgc: #fff;
 }
 
 :root.dark {
@@ -37,6 +39,7 @@
   --text-color-secondary: #c2c2c2;
   --text-color-third: #8f8f8f;
   --text-color-fourth: #cbcbcb;
+  --text-color-placeholder: #8a8a8a;
   --box-shadow: rgba(0, 0, 0, 0.6);
 
   /* 侧边栏 */
@@ -58,4 +61,5 @@
   --skillbar-bgc: #444;
   --link-color: #f0f0f0;
   --input-border: #555;
+  --input-bgc: #000;
 }

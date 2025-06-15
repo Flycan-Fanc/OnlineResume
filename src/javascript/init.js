@@ -20,7 +20,6 @@ function highlightActiveMenu() {
 // highlightActiveMenu();
 
 // 初始化主题
-let theme = localStorage.getItem("theme");
-if (theme === "dark") {
-  document.documentElement.classList.add("dark");
-}
+const theme = localStorage.getItem("theme");
+const isDark = theme === "dark";
+document.documentElement.classList.toggle("dark", isDark);
