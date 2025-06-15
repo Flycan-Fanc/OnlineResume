@@ -1,4 +1,7 @@
 // 优先正确显示主题切换图片
+const theme = localStorage.getItem("theme");
+const isDark = theme === "dark";
+document.documentElement.classList.toggle("dark", isDark);
 const [lightSwitcher, darkSwitcher] = [".turnLight_switcher", ".turnDark_switcher"].map((sel) => document.querySelector(`.sidebar .theme-switcher ${sel}`));
 lightSwitcher?.classList.toggle("active", isDark);
 darkSwitcher?.classList.toggle("active", !isDark);
