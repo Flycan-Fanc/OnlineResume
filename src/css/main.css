@@ -383,6 +383,7 @@ body {
   .sidebar .theme-switcher img {
     width: 2em;
     height: 2em;
+    cursor: pointer;
   }
   .sidebar .profile {
     display: flex;
