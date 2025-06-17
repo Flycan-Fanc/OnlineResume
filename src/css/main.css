@@ -28,6 +28,7 @@ body {
     width: 100%;
     padding: 1rem;
     background-color: var(--bgc-body);
+    z-index: 1;
   }
   .mobile-menu-btn {
     display: block; /* 移动端显示汉堡按钮 */
@@ -1429,6 +1430,7 @@ body {
   border-radius: 5px;
   transition: all 0.5s ease-out;
   cursor: pointer;
+  box-sizing: border-box;
 }
 #portfolio .card-container .pot-card:hover {
   box-shadow: 0 0 0.5rem var(--card-shadow);
@@ -1476,6 +1478,9 @@ body {
     padding: 1rem;
     box-sizing: border-box;
     gap: 0.5rem;
+  }
+  #portfolio .card-container .pot-card .picture {
+    margin-top: 1.25rem;
   }
   #portfolio .card-container .pot-card img {
     height: 150px;
